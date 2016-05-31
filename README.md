@@ -11,6 +11,7 @@ Well, you need to create a table on your SQL first.
 Config the connection string in 'web.config' '<connectionStrings>' tag
 
 modify every method of GetByIdVn method to retrieve the right fields of your table:
+
         using (SqlCommand command = new SqlCommand("SELECT * FROM TestTable where id="+id, conn))
         {
             using (SqlDataReader reader = command.ExecuteReader())
@@ -31,6 +32,7 @@ modify every method of GetByIdVn method to retrieve the right fields of your tab
 ## Remark
 This sample use convention-based routing and attributing routing of .Net WebApi to control the api version.
 convention-based routing:
+
         public static class WebApiConfig
         {
             public static void Register(HttpConfiguration config)
@@ -52,8 +54,9 @@ convention-based routing:
             }
         }
 attributing routing:
-        [Route("GetById/v1/{id}")]
-        public Test GetByIdV1(int id)
+
+            [Route("GetById/v1/{id}")]
+            public Test GetByIdV1(int id)
         
 *Note: I'm currently considering how to put all routeTemplates together for better management*
 
