@@ -2,13 +2,13 @@
 
 ## Usage
 
-For quick start of this app, make break points in 'GetByIdV1/V2/V3/V4' methods of TestController.cs file.
+For quick start of this app, make break points in `GetByIdV1/V2/V3/V4` methods of TestController.cs file.
 Run the app with visual studio 2015, and type in the location of browser "http://localhost:*port*/api/Test/GetbyId/v2/1", and you will see the break point run into the right method.
 
 ## Full Usage
 Well, you need to create a table on your SQL first.
 
-Config the connection string in 'web.config' '<connectionStrings>' tag
+Config the connection string in `web.config` `<connectionStrings>` tag
 
 modify every method of GetByIdVn method to retrieve the right fields of your table:
 
